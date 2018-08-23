@@ -1,0 +1,35 @@
+@import '../../styles/variable.scss';
+
+$modal-prefix: #{$prefix}-modal;
+
+.#{$modal-prefix} {
+  position: fixed;
+  padding: 10px;
+  .#{$modal-prefix}-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255,255,255, 0.5);
+    transition: 300ms;
+    opacity: 01;
+  }
+  .#{$modal-prefix}-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 10px;
+    background: $white-color;
+    z-index: 9999;
+    border: 1px solid $primary-color;
+    width: 300px;
+    .#{$modal-prefix}-header {
+      font-size: 18px;
+    }
+    .#{$modal-prefix}-body {
+      padding: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import './variable.scss';
+
+$button-prefix: #{$prefix}-button;
+
+.#{$button-prefix} {
+  border: 2px solid transparent;
+  background: $default-color;
+  outline: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  transition: 100ms;
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+  &.#{$button-prefix}-primary {
+    color: $white-color;
+    background: $primary-color;
+  }
+  &:active {
+    background: $active-color;
+    transform: scale(0.98,0.98)
+  }
+}

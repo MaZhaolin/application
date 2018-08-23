@@ -1,0 +1,51 @@
+@import './variable.scss';
+
+.ft-switch {
+  display: inline-block;
+  width: 35px;
+  padding: 1px 2px 0px 2px;
+  border: 2px solid $black-color;
+  border-radius: 20px;
+  transition: 200ms;
+  &::after {
+    display: inline-block;
+    content: '';
+    background: $black-color;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transition: 200ms;
+  }
+  &:hover {
+    color: $black-hover-color;
+    &::after {
+      background: $black-hover-color;
+    }
+  }
+  &:active {
+    border-color: $black-active-color;
+    background: $black-active-color;
+    &::after {
+      background: $white-color;
+    }
+  }
+  &.active {
+    border-color: rgb(0, 120, 215);
+    background: rgb(0, 120, 215);
+    &::after {
+      transform: translateX(24px);
+      background: $white-color;
+    }
+    &:hover {
+      border-color: rgba(0, 120, 215, 0.8);
+      background: rgba(0, 120, 215, 0.8);
+    }
+    &:active {
+      border-color: $black-active-color;
+      background: $black-active-color;
+      &::after {
+        background: $white-color;
+      }
+    }
+  }
+}
