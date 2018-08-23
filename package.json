@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "InsertSweat <769356353@qq.com>",
   "description": "An electron-vue project",
-  "license": null,
+  "license": "apache",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",

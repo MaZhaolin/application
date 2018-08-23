@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <div class="header">
-      <ft-icon code="E703"></ft-icon>
+      <div class="drag"></div>
+      <FtBarButton icon="E921"></FtBarButton>
+      <FtBarButton icon="E922"></FtBarButton>
+      <FtBarButton icon="E8BB" @click.native="close"></FtBarButton>
     </div>
     <FtButton @click.native="() => visible = true">show modal</FtButton>
+    <FtBarButton icon="E711" label="asdads"></FtBarButton>
     <FtSwitch></FtSwitch>
     <FtModal :visible="visible">
       <div slot="title">Save your work?</div>
@@ -11,8 +15,8 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ab nam vel velit. Doloremque cumque eius ab architecto voluptas odio, natus sunt quos commodi amet accusantium, quam placeat ratione necessitatibus?
       </div>
       <div slot="footer">
-        <FtButton type="primary" @click.native="() => visible = false">Button</FtButton>
-        <ft-button>Cancel</ft-button>
+        <FtButton type="primary">Button</FtButton>
+        <ft-button @click.native="() => visible = false">Cancel</ft-button>
       </div>
     </FtModal>
     Hello,World
@@ -23,29 +27,44 @@
 <script>
   import FtIcon from './components/icon'
   import FtButton from './components/button'
+  import FtBarButton from './components/bar-button'
   import FtSwitch from './components/switch'
   import FtModal from './components/modal'
   export default {
     name: 'application',
     data () {
       return {
-        visible: true
+        visible: false
+      }
+    },
+    methods: {
+      close () {
+        console.log(1)
+        window.close()
       }
     },
     components: {
       FtIcon,
       FtButton,
+      FtBarButton,
       FtSwitch,
       FtModal
     }
   }
 </script>
 
-<style>
+<style lang="scss">
 .header {
-  -webkit-app-region: drag;
-  height: 60px;
-  background: orange 
+  width: 100%;
+  height: 29px;
+  z-index: 100;
+  font-size: 0;
+  .drag {
+    -webkit-app-region: drag;
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 36px * 3)
+  }
 }
   /* CSS */
 </style>

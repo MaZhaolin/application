@@ -9,6 +9,7 @@ $button-prefix: #{$prefix}-button;
   padding: 6px 10px;
   font-size: 14px;
   transition: 100ms;
+  vertical-align: top;
   &:hover {
     border-color: rgba(0, 0, 0, 0.5);
   }

@@ -1,0 +1,21 @@
+@import '../../styles/variable.scss';
+
+$bar-btn-prefix: #{$prefix}-bar-button;
+
+.#{$bar-btn-prefix} {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  outline: none;
+  padding: 5px 10px;
+  vertical-align: top;
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);    
+  }
+  &:active {
+    background: rgba(0, 0, 0, 0.2);    
+  }
+  .#{$bar-btn-prefix}--label {
+    display: block;
+    font-size: 12px;
+  }
+}

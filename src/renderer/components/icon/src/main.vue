@@ -1,5 +1,6 @@
 <template>
-  <i class="ft-icon" v-html="`&#x${code};`" :style="{color}"></i> 
+  <!-- eslint-disable-next-line vue/no-parsing-error -->
+  <i class="ft-icon" v-html="`&#x${code};`" :style="{color, fontSize: `${size}px`}"></i> 
 </template>
 
 <script>
@@ -11,6 +12,10 @@ export default {
     },
     code: {
       type: String
+    },
+    size: {
+      type: Number,
+      default: 32
     }
   }
 }
