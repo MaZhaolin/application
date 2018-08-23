@@ -19,12 +19,13 @@ $modal-prefix: #{$prefix}-modal;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate(-50%, -52%);
     padding: 10px;
     background: $white-color;
     z-index: 9999;
     border: 1px solid $primary-color;
     width: 300px;
+    z-index: 1;
     .#{$modal-prefix}-header {
       font-size: 18px;
     }
